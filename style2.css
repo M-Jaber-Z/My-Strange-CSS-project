@@ -1,0 +1,38 @@
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.container {
+    position: absolute;
+    top: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute ;
+    width: calc(var(--i) * 3vmin);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    outline: 1px solid blue;
+    border: 3px solid blue;
+    transform: rotateX(70deg) translateZ(50px);
+    animation: animate 3s ease-in-out calc(var(--i) * 0.1s) infinite;
+}
+
+@keyframes animate {
+    0%,
+    100%{
+        transform: rotateX(70deg) translateZ(50px);
+    }
+
+    50%{
+        transform: rotateX(70deg) translateY(50vmin);
+    }
+}
